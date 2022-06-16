@@ -1,0 +1,26 @@
+{
+    "name": "MRNet",
+    "n_gpu": 4,
+    "best_model": "place_holder",
+    "trainer": {
+        "save_dir": "/scratch/authorid/results_brats_rerun/MRNet/",
+        "verbosity": 2
+    },
+    "data_loader": {
+        "args":{
+            "fold": 0
+        }
+    },
+
+    "xai": {
+        "modality": ["axial", "sagittal", "coronal"],
+
+        "method_list": [
+        "Occlusion", "FeatureAblation", "KernelShap", "ShapleyValueSampling",
+            "Gradient", "GuidedBackProp",
+                   "InputXGradient", "Deconvolution",
+                   "SmoothGrad", "IntegratedGradients","GradientShap", "Lime"
+        ],
+        "last_layer": "features.denseblock4.denselayer16.layers.conv2"
+    }
+}

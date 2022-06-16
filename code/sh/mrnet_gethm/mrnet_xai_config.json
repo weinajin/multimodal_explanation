@@ -1,0 +1,23 @@
+{
+    "name": "MRNet",
+    "n_gpu": 4,
+    "best_model": "place_holder",
+    "trainer": {
+        "save_dir": "/local-scratch/authorid/log/MRNet",
+        "verbosity": 2
+    },
+    "data_loader": {
+        "args":{
+            "fold": 0
+        }
+    },
+
+    "xai": {
+        "modality": ["axial", "sagittal", "coronal"],
+
+        "method_list": [
+        "GradientShap"
+        ],
+        "last_layer": "features.denseblock4.denselayer16.layers.conv2"
+    }
+}

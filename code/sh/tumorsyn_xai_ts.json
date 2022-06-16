@@ -1,0 +1,69 @@
+{
+    "name": "tumorsyn",
+    "image_key": "image",
+    "n_gpu": 4,
+
+    "arch": {
+        "type": "densenet121",
+        "args": {
+            "in_channels": 4,
+            "out_channels": 2,
+            "spatial_dims": 2,
+            "pretrained": true
+        }
+    },
+    "best_model": "place_holder",
+    "data_loader": {
+        "type": "TumorSynDataLoader",
+        "args":{
+            "fold": 7,
+            "n_gpu": 4,
+            "brain_trfm": true,
+            "tumor_trfm": true,
+            "healthy_brain_dir": "/local-scratch/authorid/dld_data/HealthyBrain2D",
+            "input_save_dir": "/local-scratch/authorid/trained_model/tumorsyn",
+            "batch_size": 4,
+            "shuffle": true,
+            "val_dataset": false,
+            "first_gt_align_prob": 1,
+            "sec_gt_align_prob": 0.7,
+            "gan_dir": "/local-scratch/authorid/trained_model/GanBrainTumor/model_weight/"
+        }
+    },
+    "optimizer": {
+        "type": "Adam",
+        "args":{
+            "lr": 0.001,
+            "weight_decay": 5e-4,
+            "amsgrad": true
+        }
+    },
+    "loss": "ce_loss",
+    "metrics": [
+        "accuracy", "f1", "prauc"
+    ],
+    "non_scalar_metrics": ["cm", "auroc", "precision", "recall"],
+    "lr_scheduler": {
+        "type": "StepLR",
+        "args": {
+            "step_size": 50,
+            "gamma": 0.1
+        }
+    },
+    "trainer": {
+        "epochs": 500,
+        "save_dir": "/local-scratch/authorid/tumorsyn/log",
+        "save_period": 1,
+        "verbosity": 2,
+        "monitor": "max val_accuracy",
+        "early_stop": 50,
+        "tensorboard": true
+    },
+    
+    "xai": {
+        "modality": ["flair","t1", "t1ce", "t2"],
+        "method_list": ["Gradient"
+        ],
+        "last_layer": "features.denseblock4.denselayer16.layers.conv2"
+    }
+}
