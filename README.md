@@ -13,7 +13,7 @@ We generate explanations on two multi-modal medical image analysis tasks: brain 
 │   ├── TumorSim            # Utility function for the tumorgenerator_dataloader.py of the synthetic glioma data. Code from http://dx.doi.org/10.1002/mp.14701
 │   ├── MRNet               # Model training and testing for the MRNet dataset on knee lesion classification
 │   ├── utils               # Utility function for model training
-│   ├── sh                  # Bash for experiment running
+│   ├── sh                  # Bash and json files for experiment running
 │   ├── xai_pipeline.py     # Heatmap explanation generation and evaluation pipeline for the BraTS model
 │   └── xai_mrnet.py        # Heatmap explanation generation and evaluation pipeline for the MRNet model
 ├── paper                   # Preprint paper and supplementary materials
@@ -39,10 +39,10 @@ We generate explanations on two multi-modal medical image analysis tasks: brain 
 ```bash
 git clone <thisrepo>
 # install the requirements
-module load python/3.7
-virtualenv --no-download <path>/venv
-source <path>/venv/bin/activate
-pip install -r code/requirement.txt
+conda create -n brain python=3.7
+conda activate brain
+conda install -c pytorch torchvison=0.5
+pip install code/requirment.txt
 ```
 
 
@@ -69,7 +69,7 @@ pip install -r code/requirement.txt
 The ```--job``` parameter can be spcified to run for different jobs listed below:
 
 
-- ```gethm```: Generate heatmap explanation for the explainable AI algorithm as specified in the json file: ```xai/method_list```
+- ```gethm```: Generate heatmap explanation for the explainable AI algorithm as specified in the json file: ```xai/method_list```. The generated heatmaps are saved as .pkl files for further evaluation. 
 - ```mi```: Run modality ablation experiments to get the modality Shapley value as modality importance
 - ```mi_reporting```: Compute the Shapley value for each medical image modality as modality importance
 - ```mi_readhm```: Calculate the heatmap sum for each image modality
