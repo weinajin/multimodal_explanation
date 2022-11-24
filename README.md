@@ -45,12 +45,13 @@ conda install -c pytorch torchvison=0.5
 pip install code/requirment.txt
 ```
 
-
-
-
 <a name="usage"></a>
 ## Usage
 ### Model training on multi-modal medical image data
+
+Training the model requires downloading the publicly-available [BraTS 2020 dataset](https://www.med.upenn.edu/cbica/brats2020/data.html) for the glioma grading task, or [MRNet dataset](https://stanfordmlgroup.github.io/competitions/mrnet/) for the knee lesion classification task.
+
+
 1. Training model on the BraTS data
     ```bash
     python train.py --config sh/config_cc_plain2_BRATS_HGG.json --fold 1 --seed 2
@@ -65,6 +66,8 @@ pip install code/requirment.txt
     ```
 
 ### Generating and evaluating heatmap explanations
+
+Generating and evaluating the heatmaps require to have the trainde model. In addition, the informative plausibility evaluation will need the [BraTS 2020 dataset](https://www.med.upenn.edu/cbica/brats2020/data.html) dataset, which contains the ground-truth tumor segmentation mask. 
 
 The ```--job``` parameter can be spcified to run for different jobs listed below:
 
