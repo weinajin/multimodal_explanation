@@ -29,7 +29,7 @@ We generate explanations on two multi-modal medical image analysis tasks: brain 
 - Generating explanation for multi-modal medical image tasks
 ![](image/MethodsX_GraphicAbstract.jpg)
 - Evaluating explainable AI algorithms based on clinical requirements as outlined in [the Clinical Explainable AI Guidelines](https://doi.org/10.1016/j.media.2022.102684)
-![](image/graphic abstract_XAI_guideline_cameraready.jpg)
+![](image/graphicabstract_XAI_guideline_cameraready.jpg)
 
 
 
