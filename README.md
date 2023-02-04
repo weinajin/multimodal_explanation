@@ -16,6 +16,7 @@ We generate explanations on two multi-modal medical image analysis tasks: brain 
 │   ├── sh                  # Bash and json files for experiment running
 │   ├── xai_pipeline.py     # Heatmap explanation generation and evaluation pipeline for the BraTS model
 │   └── xai_mrnet.py        # Heatmap explanation generation and evaluation pipeline for the MRNet model
+├── data                    # Train, validation, and test data split csv files for MICCAI_BraTS2020_TrainingData
 ├── paper                   # Preprint paper and supplementary materials
 ├── image                   # Graphic abstract of the associated papers
 └── README.md
@@ -95,14 +96,17 @@ python xai_pipeline.py --config sh/xai_cc_plain2_BRATS_HGG.json --fold 1 --seed 
 [Guidelines and evaluation of clinical explainable AI in medical image analysis](https://doi.org/10.1016/j.media.2022.102684) 
 
 Weina Jin, Xiaoxiao Li, Mostafa Fatehi, Ghassan Hamarneh.
-Medical Image Analysis. 2022
+Medical Image Analysis. 2023
+
+This paper include the two evaluations on the brain and knee datasets.
 ```bibtext
 @article{JIN2022102684,
 title = {Guidelines and evaluation of clinical explainable AI in medical image analysis},
 author = {Weina Jin and Xiaoxiao Li and Mostafa Fatehi and Ghassan Hamarneh},
 journal = {Medical Image Analysis},
+volume = {84},
 pages = {102684},
-year = {2022},
+year = {2023},
 issn = {1361-8415},
 doi = {https://doi.org/10.1016/j.media.2022.102684},
 url = {https://www.sciencedirect.com/science/article/pii/S1361841522003127},
@@ -113,6 +117,8 @@ url = {https://www.sciencedirect.com/science/article/pii/S1361841522003127},
 
 Weina Jin, Xiaoxiao Li, Ghassan Hamarneh.
 AAAI. 2022
+
+This paper is the evaluation on the brain dataset alone.
 ```bibtext
 @article{Jin_Li_Hamarneh_2022, 
 title = {Evaluating Explainable AI on a Multi-Modal Medical Imaging Task: Can Existing Algorithms Fulfill Clinical Requirements?}, 
@@ -125,6 +131,26 @@ pages = {11945-11953}
 }
 ```
 
+[Generating post-hoc explanation from deep neural networks for multi-modal medical image analysis tasks](https://www.sciencedirect.com/science/article/pii/S2215016123000146)
+
+Weina Jin, Xiaoxiao Li, Mostafa Fatehi, Ghassan Hamarneh.
+MethodsX. 2023
+
+This paper describes the review and implementation of the included post-hoc explanation algorithms.
+```bibtext
+@article{JIN2023102009,
+title = {Generating post-hoc explanation from deep neural networks for multi-modal medical image analysis tasks},
+journal = {MethodsX},
+volume = {10},
+pages = {102009},
+year = {2023},
+issn = {2215-0161},
+doi = {https://doi.org/10.1016/j.mex.2023.102009},
+url = {https://www.sciencedirect.com/science/article/pii/S2215016123000146},
+author = {Weina Jin and Xiaoxiao Li and Mostafa Fatehi and Ghassan Hamarneh},
+}
+
+```
 <a name="faq"></a>
 ## Questions?
 Please create a [new issue](https://github.com/weinajin/multimodal_explanation/issues/new/choose) detailing concisely, yet complete what issue you encountered, in a reproducible way.
