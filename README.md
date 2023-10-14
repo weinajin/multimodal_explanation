@@ -39,11 +39,12 @@ We generate explanations on two multi-modal medical image analysis tasks: brain 
 ## Installation
 ```bash
 git clone git@github.com:weinajin/multimodal_explanation.git
+cd multimodal_explanation
 # install the requirements
 conda create -n brain python=3.7
 conda activate brain
 conda install -c pytorch torchvison=0.5
-pip install -r code/requirment.txt
+pip install -r ./code/requirement_cc.txt
 ```
 
 <a name="usage"></a>
