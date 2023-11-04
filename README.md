@@ -19,6 +19,7 @@ We generate explanations on two multi-modal medical image analysis tasks: brain 
 ├── data                    # Train, validation, and test data split csv files for MICCAI_BraTS2020_TrainingData
 ├── paper                   # Preprint paper and supplementary materials
 ├── image                   # Graphic abstract of the associated papers
+├── neurosurgeon35_clinical_study_data_analysis                   # Data analysis code for the paper "Evaluating the Clinical Utility of Artificial Intelligence Assistance and its Explanation on the Glioma Grading Task"
 └── README.md
 ```
 
@@ -27,10 +28,11 @@ We generate explanations on two multi-modal medical image analysis tasks: brain 
 
 - Providing explanation is important for the clinical deployment of AI-based decision support systems
 - We conduct computational evaluations to examine whether the existing post-hoc explainable AI algorithms can fulfill clinical requirements 
-- Generating explanation for multi-modal medical image tasks
+- [Generating explanation for multi-modal medical image tasks](https://www.sciencedirect.com/science/article/pii/S2215016123000146)
 ![](image/MethodsX_GraphicAbstract.jpg)
 - Evaluating explainable AI algorithms based on clinical requirements as outlined in [the Clinical Explainable AI Guidelines](https://doi.org/10.1016/j.media.2022.102684)
 ![](image/graphicabstract_XAI_guideline_cameraready.jpg)
+- Evaluating the clinical utility of AI and explanation with 35 neurosurgeons on the glioma grading task. [Code for study data analysis](https://github.com/weinajin/multimodal_explanation/tree/main/neurosurgeon35_clinical_study_data_analysis)
 
 
 
