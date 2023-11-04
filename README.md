@@ -32,7 +32,9 @@ We generate explanations on two multi-modal medical image analysis tasks: brain 
 ![](image/MethodsX_GraphicAbstract.jpg)
 - Evaluating explainable AI algorithms based on clinical requirements as outlined in [the Clinical Explainable AI Guidelines](https://doi.org/10.1016/j.media.2022.102684)
 ![](image/graphicabstract_XAI_guideline_cameraready.jpg)
-- Evaluating the clinical utility of AI and explanation with 35 neurosurgeons on the glioma grading task. [Code for study data analysis](https://github.com/weinajin/multimodal_explanation/tree/main/neurosurgeon35_clinical_study_data_analysis)
+- Evaluating the clinical utility of AI and explanation with 35 neurosurgeons on the glioma grading task. 
+  - [Code for study data analysis](https://github.com/weinajin/multimodal_explanation/tree/main/neurosurgeon35_clinical_study_data_analysis)
+  - The clinical study data neurosurgeon35_data.csv is undergoing ethics review. We will make the study data publicly available once the ethics application is approved.
 
 
 
