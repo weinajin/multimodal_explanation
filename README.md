@@ -19,7 +19,7 @@ We generate explanations on two multi-modal medical image analysis tasks: brain 
 ├── data                    # Train, validation, and test data split csv files for MICCAI_BraTS2020_TrainingData
 ├── paper                   # Preprint paper and supplementary materials
 ├── image                   # Graphic abstract of the associated papers
-├── neurosurgeon35_clinical_study_data_analysis                   # Data analysis code for the paper "Evaluating the Clinical Utility of Artificial Intelligence Assistance and its Explanation on the Glioma Grading Task"
+├── neurosurgeon_clinical_study_data_analysis                   # Data analysis code for the paper "Evaluating the Clinical Utility of Artificial Intelligence Assistance and its Explanation on the Glioma Grading Task"
 └── README.md
 ```
 
@@ -156,6 +156,31 @@ author = {Weina Jin and Xiaoxiao Li and Mostafa Fatehi and Ghassan Hamarneh},
 }
 
 ```
+
+[Evaluating the clinical utility of artificial intelligence assistance and its explanation on the glioma grading task](https://doi.org/10.1016/j.artmed.2023.102751)
+
+Weina Jin (co-first author), Mostafa Fatehi (co-first author), Ru Guo, Ghassan Hamarneh. 
+Artificial Intelligence in Medicine. 2024
+
+This paper is the neurosurgeon clinical user study to evaluate the clinical utility of AI and explainable AI on task performance.
+[Video paper presentation](https://www.youtube.com/watch?v=rhLQQsc8Z8Y&t=29s)
+
+```
+@article{JIN2024102751,
+title = {Evaluating the clinical utility of artificial intelligence assistance and its explanation on the glioma grading task},
+journal = {Artificial Intelligence in Medicine},
+pages = {102751},
+year = {2024},
+issn = {0933-3657},
+doi = {https://doi.org/10.1016/j.artmed.2023.102751},
+url = {https://www.sciencedirect.com/science/article/pii/S0933365723002658},
+author = {Weina Jin and Mostafa Fatehi and Ru Guo and Ghassan Hamarneh},
+keywords = {Artificial intelligence, Neuro-imaging, Neurosurgery, Explainable artificial intelligence, Clinical study, Human-centered artificial intelligence},
+abstract = {Clinical evaluation evidence and model explainability are key gatekeepers to ensure the safe, accountable, and effective use of artificial intelligence (AI) in clinical settings. We conducted a clinical user-centered evaluation with 35 neurosurgeons to assess the utility of AI assistance and its explanation on the glioma grading task. Each participant read 25 brain MRI scans of patients with gliomas, and gave their judgment on the glioma grading without and with the assistance of AI prediction and explanation. The AI model was trained on the BraTS dataset with 88.0% accuracy. The AI explanation was generated using the explainable AI algorithm of SmoothGrad, which is selected from 16 algorithms based on the criterion of being truthful to the AI decision process. Results showed that compared to the average accuracy of 82.5±8.7% when physicians performed the task alone, physicians’ task performance increased to 87.7±7.3% with statistical significance (p-value = 0.002) when assisted by AI prediction, and remained at almost the same level of 88.5±7.0% (p-value = 0.35) with the additional assistance of AI explanation. Based on quantitative and qualitative results, the observed improvement in physicians’ task performance assisted by AI prediction was mainly because physicians’ decision patterns converged to be similar to AI, as physicians only switched their decisions when disagreeing with AI. The insignificant change in physicians’ performance with the additional assistance of AI explanation was because the AI explanations did not provide explicit reasons, contexts, or descriptions of clinical features to help doctors discern potentially incorrect AI predictions. The evaluation showed the clinical utility of AI to assist physicians on the glioma grading task, and identified the limitations and clinical usage gaps of existing explainable AI techniques for future improvement.}
+}
+```
+
+
 <a name="faq"></a>
 ## Questions?
 Please create a [new issue](https://github.com/weinajin/multimodal_explanation/issues/new/choose) detailing concisely, yet complete what issue you encountered, in a reproducible way.
